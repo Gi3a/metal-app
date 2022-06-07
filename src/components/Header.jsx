@@ -39,12 +39,12 @@ const Post = styled.div`
 
 	.phone {
 		font-size: 15px;
-		margin-right: 80px;
+		margin: 7px 80px 7px 0
 	} 
 
 	.email {
 		font-size: 15px;
-		margin-right: auto;
+		margin: 7px auto 7px 0
 	}
 
 	.up-header {
