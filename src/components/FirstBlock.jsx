@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Map from '../assets/images/maps/main-map.png'
 
 function FirstBlock() {
 	return (
@@ -21,8 +22,16 @@ function FirstBlock() {
 							Например: круглая шлифовка деталей
 						</p>
 					</div>
-					<div className='first-map'></div>
+					<div className='first-map'>
+						<img src={Map} alt="" />
+					</div>
 				</div>
+			</div>
+			<div className='second-block'>
+				<div>Бесплатное размещение</div>
+				<div>Все в одном месте</div>
+				<div>Экономия времени на поиск</div>
+				<div>Проверенные исполнители</div>
 			</div>
 		</Page>
 
@@ -59,20 +68,48 @@ const Page = styled.div`
 		margin-bottom: 60px;
 	}
 
+	.input-wrapper { 
+		display: flex;
+	}
+
 	.input {
-		width: 450px;
-		border-radius: 5px 0 0 5px;
+		border-radius: 5px 0px 0px 5px;
 		border: none;
-		padding: 10px;
+		padding: 10px 10px 10px 15px;
 		font-size: 17px;
-		color: #000;
+		color: rgb(0, 0, 0);
 		font-weight: 600;
+		flex: 6;
+		outline: none;
+		cursor: pointer;
 	}
 
 	.input-btn {
-		background-color: #FFD600;
-		padding: 12px 0 11px;
+		background-color: rgb(255, 214, 0);
+		padding: 15px;
+		border-radius: 0 5px 5px 0;
 		border: none;
+		font-weight: bold;
+		flex: 1;
+		cursor: pointer;
+	}
+
+	.under-label {
+		margin: 5px 0px 0px 15px ;
+		font-size: 15px;
+		color: #fff;
+	}
+
+	.second-block {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		background-color: #7A3DD0;
+	}
+
+	.second-block div {
+
+		height: 65px;
 	}
 `
 
