@@ -1,0 +1,30 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	overflow-x: hidden;
+	font-family: 'Montserrat', sans-serif;
+}
+
+h1,
+h2,
+h3,
+p,
+span {
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+}
+
+svg {
+	margin: 0 3px;
+}
+
+::selection {
+	background-color: #000;
+}

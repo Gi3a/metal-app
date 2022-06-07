@@ -4,7 +4,10 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Error from './pages/Error';
 
-import './assets/styles/index.css';
+import './assets/styles/general.css';
+import './assets/styles/app.css';
+import './assets/styles/ui/form.css';
+import './assets/styles/fonts.css';
 import MainLayout from './layouts/MainLayout';
 
 function App() {
