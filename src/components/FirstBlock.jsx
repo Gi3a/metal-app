@@ -28,10 +28,12 @@ function FirstBlock() {
 				</div>
 			</div>
 			<div className='second-block'>
-				<div>Бесплатное размещение</div>
-				<div>Все в одном месте</div>
-				<div>Экономия времени на поиск</div>
-				<div>Проверенные исполнители</div>
+				<div className='container'>
+					<div>Бесплатное размещение</div>
+					<div>Все в одном месте</div>
+					<div>Экономия времени на поиск</div>
+					<div>Проверенные исполнители</div>
+				</div>
 			</div>
 		</Page>
 

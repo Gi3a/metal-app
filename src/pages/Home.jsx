@@ -1,22 +1,12 @@
 import React from 'react'
-import styled from 'styled-components'
-import FirstBlock from '../components/FirstBlock'
-import Header from '../components/Header'
 
+import '../assets/styles/pages/Home.css'
 
 function Home() {
 	return (
-		<Post>
-			<Header />
-			<FirstBlock />
-		</Post>
+		<div className='page'>
+		</div>
 	)
 }
-
-const Post = styled.div`
-	.wow {
-		background-color: red;
-	}
-`
 
 export default Home
