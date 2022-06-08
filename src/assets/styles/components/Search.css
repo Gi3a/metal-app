@@ -32,16 +32,20 @@
 .search h1 {
 	color: #fff;
 	font-weight: bold;
-
+	font-size: 50px;
 	padding: 15px;
 
 }
 
 .search span {
 	display: flex;
-
+	font-size: 25px;
 	color: rgb(180, 180, 180);
 	font-weight: bold;
 	font-size: 20px;
 
+}
+
+.search input {
+	font-size: 15px;
 }
