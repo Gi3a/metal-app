@@ -1,11 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import { useDispatch, useSelector } from "react-redux"
 import '../assets/styles/components/Header.css'
 
 import { TbBuildingFactory2, TbClipboardList, TbCirclePlus, TbLogin } from 'react-icons/tb'
+import { setState } from '../redux/modal/reducer';
 
 function Header() {
+
+	const dispatch = useDispatch()
+
+
 	return (
 		<header>
 			<div className="container">
@@ -20,7 +25,7 @@ function Header() {
 					</Link>
 				</div>
 				<div className="header_right">
-					<Link to="/">
+					<Link onClick={() => dispatch(setState())} to="/">
 						<TbLogin />Войти
 					</Link>
 					<Link to="/" className="add_order">
