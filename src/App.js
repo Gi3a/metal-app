@@ -8,6 +8,7 @@ import './assets/styles/general.css';
 import './assets/styles/app.css';
 import './assets/styles/ui/form.css';
 import './assets/styles/fonts.css';
+
 import MainLayout from './layouts/MainLayout';
 
 function App() {
