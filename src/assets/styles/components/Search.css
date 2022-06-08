@@ -46,6 +46,7 @@
 
 }
 
-.search input {
+.form-control input,
+.form-control button {
 	font-size: 15px;
 }
