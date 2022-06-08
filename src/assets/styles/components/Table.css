@@ -1,0 +1,54 @@
+.table {
+	display: flex;
+	flex-direction: column;
+
+	width: 100%;
+}
+
+.table_top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	width: 100%;
+	border-bottom: 1px solid #ccc;
+	font-weight: bold;
+}
+
+.table_top span {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	padding: 15px;
+	flex: 1;
+}
+
+.table .container {
+	flex-direction: column;
+
+
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+.table_item {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.table_item>div {
+	display: flex;
+	justify-content: center;
+
+	padding: 15px;
+	flex: 1;
+}
+
+.table_item>div>img {
+	display: flex;
+	width: 100%;
+	height: auto;
+}

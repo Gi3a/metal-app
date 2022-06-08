@@ -1,5 +1,7 @@
 .page {
 	display: flex;
+	flex-direction: column;
+	justify-content: center;
 
 	min-height: 100vh;
 }
@@ -15,4 +17,26 @@
 	display: flex;
 	width: 100%;
 	min-height: 100vh;
+}
+
+.gradient {
+	background: linear-gradient(130deg, #363974, #4348a2, #2B2948, #191734);
+	background-size: 400% 400%;
+	animation: gradient 7s ease infinite;
+	color: #fff;
+}
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+
+	50% {
+		background-position: 100% 50%;
+	}
+
+	100% {
+		background-position: 0% 50%;
+	}
 }

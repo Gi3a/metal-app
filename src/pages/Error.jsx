@@ -1,8 +1,14 @@
 import React from 'react'
+import { useTitle } from '../utils/useTitle';
 
 function Error() {
+
+	useTitle('Error 404');
+
 	return (
-		<div>Error</div>
+		<div className='page'>
+			Error 404
+		</div>
 	)
 }
 

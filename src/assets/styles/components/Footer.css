@@ -1,9 +1,55 @@
-.footer .container {
+footer {
+	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
+	justify-content: center;
+	align-items: center;
 }
 
-footer .grid a {
+footer .container {
+	justify-content: space-between;
+	align-items: center;
+}
+
+footer .container>div {
+	display: flex;
+	flex-direction: row;
+}
+
+.footer_mid {
 	display: flex;
 	justify-content: center;
+
+
+	border-top: 1px solid #E9E9F7;
+	width: 100%;
+}
+
+footer .container a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	padding: 15px;
+	cursor: pointer;
+	transition: 0.35s all;
+	color: #000;
+}
+
+footer .container a:hover {
+	color: #00BBA8;
+}
+
+footer span {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	padding: 15px;
+	font-size: 13px;
+}
+
+footer .container a svg {
+	font-size: 24px;
+	font-weight: bold;
+	color: #00BBA8;
 }
