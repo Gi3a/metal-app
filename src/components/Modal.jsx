@@ -2,6 +2,7 @@ import React from 'react'
 import { useDispatch } from 'react-redux'
 import '../assets/styles/components/Modal.css'
 import { setState } from '../redux/modal/reducer';
+import Order from '../assets/images/orders/home-order1.png'
 
 
 function Modal() {
@@ -15,7 +16,7 @@ function Modal() {
 				<div class="hystmodal__window">
 					<button onClick={() => dispatch(setState())} data-hystclose class="hystmodal__close">Close</button>
 					Текст модального окошка.
-					<img src="img/photo.jpg" alt="Изображение в окне" />
+					<img src={Order} alt="Изображение в окне" />
 				</div>
 			</div>
 

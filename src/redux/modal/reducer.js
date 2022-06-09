@@ -7,10 +7,9 @@ const initialState = {
 
 export const modalReducer = createSlice({
 	name: 'modal',
-	initialState,
+	initialState: initialState,
 	reducers: {
 		setState: (state) => {
-			console.log(state.modalState)
 			state.modalState = !state.modalState
 		}
 	}
