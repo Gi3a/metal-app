@@ -17,9 +17,23 @@
 }
 
 .hystmodal__window {
+    padding: 20px;
     background: #fff;
     width: 600px;
     max-width: 100%;
     transition: transform 0.15s ease 0s, opacity 0.15s ease 0s;
     transform: scale(1);
+}
+
+.modal-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.modal-center form {
+    display: flex;
+    flex-direction: column;
+
+    align-content: center;
+    align-items: center;
 }
