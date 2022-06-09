@@ -23,10 +23,9 @@ function Modal() {
 	return (
 		<div>
 
-			<div className="hystmodal" id="myModal">
+			<div onClick={() => dispatch(setState())} className="hystmodal" id="myModal">
 				<div className="hystmodal__window">
 					<div className='modal-center'>
-						<button onClick={() => dispatch(setState())} data-hystclose class="hystmodal__close">Close</button>
 						<h2>Авторизация</h2>
 						<form onSubmit={handleSubmit(onSubmit)}>
 							<label>
