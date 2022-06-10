@@ -10,19 +10,11 @@ const postSlice = createSlice(({
 	name: "posts",
 	initialState: {
 		posts: [],
-		loading: false
 	},
 	extraReducers: {
-		[orderReducer.pending]: (state, action) => {
-			state.loading = true
-		},
 		[orderReducer.fulfilled]: (state, action) => {
-			state.loading = false;
 			state.posts = action.payload
 		},
-		[orderReducer.rejected]: (state, action) => {
-			state.loading = false;
-		}
 	}
 }
 ))
