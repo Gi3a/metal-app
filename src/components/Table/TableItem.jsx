@@ -9,7 +9,7 @@ function TableItem({ order }) {
 			<div><img src={order.image} /></div>
 			<div>{order.title} <br /> Created by {order.author}</div>
 			<div>{order.qty}</div>
-			<div>{order.supplier}</div>
+			{/* <div>{order.supplier}</div> */}
 			<div>{order.price}</div>
 			<div>{order.lead_time}days</div>
 			<div>{order.status}</div>
