@@ -5,7 +5,7 @@ import '../../assets/styles/components/Table.css';
 
 function Table({ title, headers, orders }) {
 	return (
-		<div className="section gradient table">
+		<div className="section table">
 			<div className="container">
 				<h1>{title}</h1>
 				<div className="table_top">

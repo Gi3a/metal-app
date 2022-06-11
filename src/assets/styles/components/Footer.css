@@ -3,6 +3,12 @@ footer {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+
+	background-color: rgba(0, 0, 0, 0.8);
+
+	margin-top: 100px;
+
+	color: #fff;
 }
 
 footer .container {
@@ -32,7 +38,7 @@ footer .container a {
 	padding: 15px;
 	cursor: pointer;
 	transition: 0.35s all;
-	color: #000;
+	color: #fff;
 }
 
 footer .container a:hover {

@@ -12,7 +12,6 @@ function Footer() {
 			<div className="container">
 				<div className="footer_left">
 					<Link to="/">FAQ</Link>
-					<Link to="/">Контакты</Link>
 					<Link to="/">Политика конфиденциальности</Link>
 				</div>
 				<div className="footer_right">
