@@ -16,7 +16,7 @@ function Orders() {
 
 	useEffect(() => {
 		dispatch(orderReducer())
-	}, [])
+	}, [dispatch])
 
 
 	const headers = [

@@ -4,6 +4,8 @@ import '../assets/styles/components/Modal.css'
 import { useForm } from 'react-hook-form'
 import { setState } from '../redux/modal/reducer'
 
+import { FaTimes } from 'react-icons/fa'
+
 function Modal() {
 	const {
 		register,
@@ -21,34 +23,46 @@ function Modal() {
 	}
 
 	return (
-		<div>
+		<div className="hystmodal" id="myModal">
+			<div className="hystmodal__window">
 
-			<div className="hystmodal" id="myModal">
-				<div className="hystmodal__window">
-					<div className='modal-center'>
-						<button onClick={() => dispatch(setState())} data-hystclose class="hystmodal__close">Close</button>
-						<h2>Авторизация</h2>
-						<form onSubmit={handleSubmit(onSubmit)}>
-							<label>
-								Your phone:
-								<input {...register('phone', { required: true, minLength: { value: 9, message: "Некорректный номер" } })} />
-							</label>
-							<div style={{ height: 40 }}>
-								{errors?.phone && <p>Поле обязательно к заполнению!</p>}
-							</div>
-							<label>
-								Your password:
-								<input {...register('password', { required: true, minLength: { value: 5, message: "Некорректный пароль" } })} />
-							</label>
-							<label>
-								<input type="submit" />
-							</label>
-						</form>
+				<button
+					onClick={() => dispatch(setState())} data-hystclose class="hystmodal__close">
+					<FaTimes />
+				</button>
+				<h2>Авторизация</h2>
+				<form onSubmit={handleSubmit(onSubmit)}>
+					<div className="form-control">
+						<input
+							{...register('phone',
+								{
+									required: true,
+									minLength: { value: 9, message: "Некорректный номер" }
+								})}
+							placeholder="Введите номер телефона"
+						/>
+						<label>{errors?.phone && <p>Поле обязательно к заполнению!</p>}</label>
 					</div>
-				</div>
+					<div className="form-control">
+						<input {...register('password',
+							{
+								required: true,
+								minLength: { value: 5, message: "Некорректный пароль" }
+							})}
+							placeholder="Введите пароль"
+						/>
+						{errors?.password && <p>Поле обязательно к заполнению!</p>}
+					</div>
+					<div className="form-control">
+						<button type="submit">
+							Войти
+						</button>
+					</div>
+				</form>
 			</div>
-
 		</div>
+
+
 	)
 }
 

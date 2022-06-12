@@ -17,10 +17,6 @@
 
 	background-color: #f6f7fa;
 
-	position: fixed;
-
-	width: 75%;
-	margin: auto;
 }
 
 .table_top span {
@@ -30,6 +26,10 @@
 
 	padding: 15px;
 	flex: 1;
+}
+
+.table>h1 {
+	padding: 3%;
 }
 
 .table .container {
@@ -55,7 +55,7 @@
 	background-color: #f6f7fa;
 	cursor: pointer;
 
-	transform: scale(1.03);
+	transform: scale(1.01);
 }
 
 .table_item>div {

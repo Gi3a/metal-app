@@ -20,7 +20,7 @@ function Home() {
 	const dispatch = useDispatch();
 	useEffect(() => {
 		dispatch(orderReducer())
-	}, [])
+	}, [dispatch])
 
 	const headers = [
 		{ id: 1, text: "Номер" },

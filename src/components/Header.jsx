@@ -20,7 +20,7 @@ function Header() {
 						<TbClipboardList />
 						Заказы
 					</Link>
-					<Link to="/">
+					<Link to="/companies">
 						<TbBuildingFactory2 />Предприятия
 					</Link>
 				</div>
@@ -28,7 +28,7 @@ function Header() {
 					<Link onClick={() => dispatch(setState())} to="/">
 						<TbLogin />Войти
 					</Link>
-					<Link to="/" className="add_order">
+					<Link to="/add-order" className="add_order">
 						<TbCirclePlus />
 						Заявка
 					</Link>
