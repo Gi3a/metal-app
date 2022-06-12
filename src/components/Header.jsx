@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useDispatch, useSelector } from "react-redux"
+import { useDispatch } from "react-redux"
 import '../assets/styles/components/Header.css'
 
 import { TbBuildingFactory2, TbClipboardList, TbCirclePlus, TbLogin } from 'react-icons/tb'
