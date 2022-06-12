@@ -1,10 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 import '../../assets/styles/components/Table.css';
 
 function TableItem({ order }) {
 	return (
-		<div className="table_item">
+		<Link to={`/ordercard/${order.id}`} className="table_item">
 			<div>{order.id}</div>
 			<div>
 				<img src={order.image} />
@@ -18,7 +19,7 @@ function TableItem({ order }) {
 			<div>
 				<button>Откликнуться</button>
 			</div>
-		</div>
+		</Link>
 	)
 }
 

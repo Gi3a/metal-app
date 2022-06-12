@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useParams } from 'react-router-dom';
 
 import './assets/styles/general.css';
 import './assets/styles/app.css';
@@ -14,8 +14,10 @@ import Orders from './pages/Orders';
 
 import AddOrder from './pages/AddOrder';
 import Companies from './pages/Companies';
+import OrderCard from './pages/OrderCard';
 
 function App() {
+
 	return (
 		<Routes>
 			<Route path="/" element={<MainLayout />}>
@@ -24,7 +26,7 @@ function App() {
 				<Route path="/orders" element={<Orders />} />
 
 				<Route path="/companies" element={<Companies />} />
-
+				<Route path="/ordercard/:id" element={<OrderCard />} />
 				<Route path="/add-order" element={<AddOrder />} />
 
 				<Route path="*" element={<Error />} />
