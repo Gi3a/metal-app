@@ -27,7 +27,7 @@ function Modal() {
 			<div className="hystmodal__window">
 
 				<button
-					onClick={() => dispatch(setState())} data-hystclose class="hystmodal__close">
+					onClick={() => dispatch(setState())} data-hystclose className="hystmodal__close">
 					<FaTimes />
 				</button>
 				<h2>Авторизация</h2>

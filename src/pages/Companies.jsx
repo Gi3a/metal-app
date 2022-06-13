@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { companiesReducer } from '../redux/companies/companies';
 import { useTitle } from '../utils/useTitle';
 
+import Company from '../components/Company';
+
 function Companies() {
 	useTitle('Companies');
 
@@ -15,7 +17,7 @@ function Companies() {
 	console.log(companies)
 	return (
 		<div className='page'>
-			Companies
+			<Company companies={companies} />
 		</div>
 	)
 }
