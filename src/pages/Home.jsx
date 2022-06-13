@@ -6,7 +6,6 @@ import { orderReducer } from '../redux/order/order';
 import Table from '../components/Table';
 
 import '../assets/styles/pages/Home.css'
-// import Modal from '../components/Modal';
 import Search from '../components/Search'
 
 import { useTitle } from '../utils/useTitle';
