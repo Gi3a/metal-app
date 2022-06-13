@@ -13,16 +13,24 @@
 	margin-top: 15px;
 }
 
-.form-control input {
+.form-control input,
+.form-control textarea {
 	display: flex;
 
-	outline: none;
+
 	font-weight: bold;
 
 	border: none;
 	border-radius: 6px 0 0 6px;
 	padding: 13px;
 	flex: 2;
+
+	outline-color: #00BBA8;
+}
+
+.form-control textarea {
+	font-size: 16px;
+	resize: none;
 }
 
 .form-control button {
@@ -44,9 +52,26 @@
 	border-radius: 0 6px 6px 0;
 	padding: 13px;
 	flex: 1;
+
+	transition: 0.5s all;
+}
+
+.form-control button:hover {
+	background: #02dcc6;
 }
 
 .form-control button svg {
 	font-size: 24px;
 	font-weight: bold;
+}
+
+.form-classic input,
+.form-classic textarea {
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	flex: 1;
+}
+
+.form-classic button {
+	border-radius: 3px;
 }

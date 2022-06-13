@@ -2,7 +2,7 @@ import React from 'react'
 import { useTitle } from '../utils/useTitle';
 
 function Balance() {
-	useTitle('Balance');
+	useTitle('Баланс');
 
 	return (
 		<div className='page'>

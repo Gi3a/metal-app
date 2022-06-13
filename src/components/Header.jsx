@@ -27,9 +27,9 @@ function Header() {
 						</Link>
 					</div>
 					<div className="header_right">
-						<Link onClick={() => dispatch(setState())} to="/">
+						<a onClick={() => dispatch(setState())} >
 							<TbLogin />Войти
-						</Link>
+						</a>
 						<Link to="/add-order" className="add_order">
 							<TbCirclePlus />
 							Заявка
