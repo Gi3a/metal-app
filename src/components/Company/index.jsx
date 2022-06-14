@@ -3,8 +3,12 @@ import React from 'react'
 import Sort from './Sort';
 import CompanyItem from './CompanyItem';
 import '../../assets/styles/components/Company.css';
+import { useSelector } from 'react-redux';
 
-function Company({ companies }) {
+function Company() {
+
+	const { companies } = useSelector((state) => state.companies)
+
 	return (
 		<div className="section companies">
 			<h1>Компании</h1>
