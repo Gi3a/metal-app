@@ -2,12 +2,12 @@ import React from 'react'
 import { useDispatch } from 'react-redux'
 import '../assets/styles/components/Modal.css'
 import { useForm } from 'react-hook-form'
-import { setState, setSignUpState } from '../redux/modal/reducer'
+import { setSignUpState, setState } from '../redux/modal/reducer'
 
 import { FaTimes } from 'react-icons/fa'
-import { Link } from 'react-router-dom'
 
-function Modal() {
+
+function ModalSignup() {
 	const {
 		register,
 		formState: { errors },
@@ -33,10 +33,10 @@ function Modal() {
 			<div className="hystmodal__window">
 
 				<button
-					onClick={() => dispatch(setState())} data-hystclose className="hystmodal__close">
+					onClick={() => dispatch(setSignUpState())} data-hystclose className="hystmodal__close">
 					<FaTimes />
 				</button>
-				<h2>Авторизация</h2>
+				<h2>Регистрация</h2>
 				<form onSubmit={handleSubmit(onSubmit)}>
 					<div className="form-control">
 						<input
@@ -61,12 +61,12 @@ function Modal() {
 					</div>
 					<div className="form-control">
 						<button type="submit">
-							Войти
+							Зарегистрироваться
 						</button>
 					</div>
 
 				</form>
-				<div>Нет аккаунта? <a href='#' onClick={dispatches} > Зарегистрируйтесь</a></div>
+				<div>Уже есть аккаунт? <a href="#" onClick={dispatches}>Авторизируйтесь</a></div>
 			</div>
 		</div>
 
@@ -74,4 +74,4 @@ function Modal() {
 	)
 }
 
-export default Modal
+export default ModalSignup

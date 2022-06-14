@@ -6,11 +6,14 @@ import '../assets/styles/components/Header.css'
 import { TbBuildingFactory2, TbClipboardList, TbCirclePlus, TbLogin } from 'react-icons/tb'
 import { setState } from '../redux/modal/reducer';
 import Modal from './Modal';
+import ModalSignup from './ModalSignup';
 
 function Header() {
 
 	const dispatch = useDispatch()
 	const modalSelector = useSelector((state) => state.modal.modalState)
+	const modalSignUpSelector = useSelector((state) => state.modal.modalSignUpState)
+
 
 	return (
 		<>
@@ -39,6 +42,7 @@ function Header() {
 
 			</header>
 			{modalSelector ? <Modal /> : ''}
+			{modalSignUpSelector ? <ModalSignup /> : ''}
 		</>
 	)
 }
