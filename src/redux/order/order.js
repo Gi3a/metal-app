@@ -15,10 +15,15 @@ const postSlice = createSlice(({
 		[orderReducer.fulfilled]: (state, action) => {
 			state.posts = action.payload
 		},
+	},
+	reducers: {
+		pushOrders: (state, action) => {
+			state.posts.push(action.payload)
+		}
 	}
 }
 ))
 
 export default postSlice.reducer;
 
-export const { getOrder } = postSlice.actions
+export const { getOrder, pushOrders } = postSlice.actions
