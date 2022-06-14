@@ -21,7 +21,7 @@ function Footer() {
 				</div>
 			</div>
 			<div className="footer_mid">
-				<span>© 2022 METAL.RU, Inc. All Rights Reserved.</span>
+				<span>© 2022 Metal.io, Inc. All Rights Reserved.</span>
 			</div>
 		</footer>
 	)

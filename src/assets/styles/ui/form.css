@@ -14,7 +14,8 @@
 }
 
 .form-control input,
-.form-control textarea {
+.form-control textarea,
+.form-control select {
 	display: flex;
 
 
@@ -70,7 +71,8 @@ form h1 {
 }
 
 .form-classic input,
-.form-classic textarea {
+.form-classic textarea,
+.form-classic select {
 	border: 1px solid #ccc;
 	border-radius: 3px;
 	flex: 1;

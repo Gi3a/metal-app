@@ -1,0 +1,53 @@
+.companies {
+	flex-direction: column;
+}
+
+.companies_sort,
+.comapnies_list {
+	display: flex;
+	flex-direction: column;
+}
+
+.companies_sort {
+	flex: 1;
+}
+
+.comapnies_list {
+	flex: 2;
+}
+
+/* CompanyItem */
+.company {
+	display: flex;
+	flex-direction: column;
+
+	border: 1px solid #ccc;
+
+	padding: 15px;
+	margin: 15px;
+
+	border-radius: 3px;
+}
+
+.img_collection {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.company img {
+	width: 20%;
+	height: 100%;
+}
+
+/* Sort */
+
+.sort {
+	display: flex;
+	flex-direction: column;
+}
+
+.sort .form-control {
+	flex-direction: column;
+}

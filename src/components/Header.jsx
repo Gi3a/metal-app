@@ -17,7 +17,7 @@ function Header() {
 			<header>
 				<div className="container">
 					<div className="header_left">
-						<Link to="/" className="logo">metal.ru</Link>
+						<Link to="/" className="logo">metal.io</Link>
 						<Link to="/orders">
 							<TbClipboardList />
 							Заказы

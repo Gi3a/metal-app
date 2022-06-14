@@ -14,7 +14,8 @@ function Companies() {
 	useEffect(() => {
 		dispatch(companiesReducer())
 	}, [dispatch])
-	console.log(companies)
+
+
 	return (
 		<div className='page'>
 			<Company companies={companies} />

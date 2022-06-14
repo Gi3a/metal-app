@@ -2,12 +2,13 @@ import React from 'react'
 
 import Sort from './Sort';
 import CompanyItem from './CompanyItem';
+import '../../assets/styles/components/Company.css';
 
 function Company({ companies }) {
 	return (
 		<div className="section companies">
 			<h1>Компании</h1>
-			<div className="companies_content">
+			<div className="container">
 				<div className="companies_sort">
 					<Sort />
 				</div>
