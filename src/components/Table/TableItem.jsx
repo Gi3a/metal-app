@@ -8,13 +8,13 @@ function TableItem({ order }) {
 		<Link to={`/order/${order.id}`} className="table_item">
 			<div>{order.id}</div>
 			<div>
-				<img src={order.image} />
+				{/* <img src={order.image} /> */}
 				<div>{order.title} <br /> Created by {order.author}</div>
 			</div>
 			<div>{order.qty}</div>
 			{/* <div>{order.supplier}</div> */}
 			<div>{order.price}</div>
-			<div>{order.lead_time} days</div>
+			<div>{order.leadtime} days</div>
 			<div>{order.flags}</div>
 			<div>
 				<button>Откликнуться</button>
