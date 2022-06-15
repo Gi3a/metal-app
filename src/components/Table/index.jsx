@@ -17,11 +17,11 @@ function Table({ title, headers, orders }) {
 						);
 					})}
 				</div>
-				{/* {orders.map((order) => {
+				{orders.map((order) => {
 					return (
 						<TableItem key={order.id} order={order} />
 					);
-				})} */}
+				})}
 			</div>
 		</div>
 	)

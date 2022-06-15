@@ -11,15 +11,16 @@ const postSlice = createSlice(({
 	initialState: {
 		posts: [],
 	},
-	extraReducers: {
-		[orderReducer.fulfilled]: (state, action) => {
-			state.posts = action.payload
-		},
-	},
+	// extraReducers: {
+	// 	[orderReducer.fulfilled]: (state, action) => {
+	// 		state.posts = action.payload
+	// 	},
+	// },
 	reducers: {
 		pushOrders: (state, action) => {
-			console.log(action.payload)
-			const posted = [...state.posts].push(action.payload)
+			const posted = [...state.posts]
+			posted.push(action.payload)
+			console.log({ posts: posted })
 			return { posts: posted }
 		}
 	}
