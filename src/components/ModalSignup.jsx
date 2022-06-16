@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import '../assets/styles/components/Modal.css'
 import { useForm } from 'react-hook-form'
 import { setSignUpState, setState } from '../redux/modal/reducer'
-
+import axios from "axios";
 import { FaTimes } from 'react-icons/fa'
 
 
@@ -18,14 +18,31 @@ function ModalSignup() {
 	});
 	const dispatch = useDispatch()
 
+	const [user, setUser] = useState({
+		phone: "",
+		password: ""
+	})
+
 	const onSubmit = (data) => {
-		alert(JSON.stringify(data))
+		setUser(data)
+		reg()
 		reset()
 	}
 
 	const dispatches = () => {
 		dispatch(setState())
 		dispatch(setSignUpState())
+	}
+
+	const reg = () => {
+		const { phone, password } = user
+		if (phone && password) {
+			axios.post("https://metal-api.vercel.app/api/signup", user)
+				.then(res => console.log(res))
+		}
+		else {
+			alert("invalid input")
+		};
 	}
 
 	return (
@@ -74,4 +91,4 @@ function ModalSignup() {
 	)
 }
 
-export default ModalSignup
+export default ModalSignup;
