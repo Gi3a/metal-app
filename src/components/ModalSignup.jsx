@@ -19,8 +19,8 @@ function ModalSignup() {
 	const dispatch = useDispatch()
 
 	const [user, setUser] = useState({
-		phone: "",
-		password: ""
+		"phone": "",
+		"password": ""
 	})
 
 	const onSubmit = (data) => {
@@ -35,8 +35,8 @@ function ModalSignup() {
 	}
 
 	const reg = () => {
-		const { phone, password } = user
-		if (phone && password) {
+		const { name, email, phone, password } = user
+		if (name && email && phone && password) {
 			axios.post("https://metal-api.vercel.app/api/signup", user)
 				.then(res => console.log(res))
 		}
@@ -57,6 +57,17 @@ function ModalSignup() {
 				<form onSubmit={handleSubmit(onSubmit)}>
 					<div className="form-control">
 						<input
+							{...register('name',
+								{
+									required: true,
+									minLength: { value: 3, message: "Некорректное имя" }
+								})}
+							placeholder="Ваше имя"
+						/>
+						<label>{errors?.name && <p>Поле обязательно к заполнению!</p>}</label>
+					</div>
+					<div className="form-control">
+						<input
 							{...register('phone',
 								{
 									required: true,
@@ -65,6 +76,17 @@ function ModalSignup() {
 							placeholder="Введите номер телефона"
 						/>
 						<label>{errors?.phone && <p>Поле обязательно к заполнению!</p>}</label>
+					</div>
+					<div className="form-control">
+						<input
+							{...register('email',
+								{
+									required: true,
+									minLength: { value: 5, message: "Некорректный адрес" }
+								})}
+							placeholder="Введите номер телефона"
+						/>
+						<label>{errors?.email && <p>Поле обязательно к заполнению!</p>}</label>
 					</div>
 					<div className="form-control">
 						<input {...register('password',
@@ -83,7 +105,7 @@ function ModalSignup() {
 					</div>
 
 				</form>
-				<div>Уже есть аккаунт? <a href="#" onClick={dispatches}>Авторизируйтесь</a></div>
+				<div>Уже есть аккаунт? <a href="/" onClick={dispatches}>Авторизируйтесь</a></div>
 			</div>
 		</div>
 
