@@ -4,7 +4,6 @@ import TableItem from './TableItem'
 import '../../assets/styles/components/Table.css';
 
 function Table({ title, headers, orders }) {
-	console.log(orders)
 
 	return (
 		<div className="section table">

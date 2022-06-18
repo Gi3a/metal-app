@@ -39,7 +39,7 @@ function ModalSignup() {
 	const reg = () => {
 		const { name, email, phone, password } = user
 		if (name && email && phone && password) {
-			axios.post("https://metal-api.vercel.app/api/signup", user)
+			axios.post("https://Metal-api.vercel.app/api/signup", user)
 				.then(res => console.log(res))
 		}
 		else {
