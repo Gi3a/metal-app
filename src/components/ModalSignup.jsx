@@ -18,12 +18,7 @@ function ModalSignup() {
 	});
 	const dispatch = useDispatch()
 
-	const [user, setUser] = useState({
-		phone: "",
-		password: "",
-		name: "",
-		email: ""
-	})
+	const [user, setUser] = useState({})
 
 	const onSubmit = (data) => {
 		setUser(data)
