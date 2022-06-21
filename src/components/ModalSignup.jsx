@@ -86,7 +86,7 @@ function ModalSignup() {
 									required: true,
 									minLength: { value: 5, message: "Некорректный адрес" }
 								})}
-							placeholder="Введите номер телефона"
+							placeholder="Введите почту"
 						/>
 						<label>{errors?.email && <p>Поле обязательно к заполнению!</p>}</label>
 					</div>
