@@ -27,8 +27,12 @@ function ModalSignup() {
 
 	const onSubmit = (data) => {
 		setUser(data)
-		reg()
-		reset()
+		setTimeout(() => {
+			reg()
+		});
+		setTimeout(() => {
+			reset()
+		});
 	}
 
 	const dispatches = () => {
