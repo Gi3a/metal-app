@@ -18,11 +18,18 @@ function ModalSignup() {
 	});
 	const dispatch = useDispatch()
 
-	const [user, setUser] = useState({})
+	const [user, setUser] = useState({
+		email: "",
+		password: "",
+		name: "",
+		phone: ""
+	})
 
 	const onSubmit = (data) => {
-		setUser(data)
-		// reg()
+		// console.log(data)
+		// setUser(data)
+		// console.log(user)
+		reg(data)
 		// reset()
 	}
 
@@ -31,9 +38,9 @@ function ModalSignup() {
 		dispatch(setSignUpState())
 	}
 
-	const reg = () => {
-		const { name, email, phone, password } = user
-		console.log(user)
+	const reg = (data) => {
+		const { name, email, phone, password } = data
+		console.log(data)
 		if (name && email && phone && password) {
 			axios.post("https://Metal-api.vercel.app/api/signup", user)
 				.then(res => console.log(res))
