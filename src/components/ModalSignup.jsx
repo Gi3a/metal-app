@@ -26,9 +26,6 @@ function ModalSignup() {
 	})
 
 	const onSubmit = (data) => {
-		// console.log(data)
-		// setUser(data)
-		// console.log(user)
 		reg(data)
 		// reset()
 	}
@@ -42,7 +39,7 @@ function ModalSignup() {
 		const { name, email, phone, password } = data
 		console.log(data)
 		if (name && email && phone && password) {
-			axios.post("https://Metal-api.vercel.app/api/signup", data)
+			axios.post("https://metal-api.vercel.app/api/signup", data)
 				.then(res => console.log(res))
 		}
 		else {

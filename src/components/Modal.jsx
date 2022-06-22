@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import '../assets/styles/components/Modal.css'
 import { useForm } from 'react-hook-form'
 import { setState, setSignUpState } from '../redux/modal/reducer'
-
+import axios from "axios";
 import { FaTimes } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 
@@ -19,13 +19,33 @@ function Modal() {
 	const dispatch = useDispatch()
 
 	const onSubmit = (data) => {
-		alert(JSON.stringify(data))
+		reg(data)
 		reset()
 	}
+
+	const [user, setUser] = useState({
+		phone: "",
+		password: ""
+	})
 
 	const dispatches = () => {
 		dispatch(setState())
 		dispatch(setSignUpState())
+	}
+
+	const reg = (data) => {
+		const { email, password } = data
+		console.log(data)
+		if (email && password) {
+			axios.post("https://metal-api.vercel.app/api/login", data)
+				.then(res => {
+					localStorage.setItem('token', res.data.accessToken);
+					// общий setUser и setAuth состояние, для идентификации запуска сессии на клиенте
+				})
+		}
+		else {
+			alert("invalid input")
+		};
 	}
 
 	return (
@@ -40,17 +60,17 @@ function Modal() {
 				<form onSubmit={handleSubmit(onSubmit)}>
 					<div className="form-control">
 						<input
-							{...register('phone',
+							{...register('email',
 								{
 									required: true,
-									minLength: { value: 9, message: "Некорректный номер" }
+									minLength: { value: 5, message: "Некорректный адрес" }
 								})}
-							placeholder="Введите номер телефона"
+							placeholder="Введите почту"
 						/>
 						<label>{errors?.phone && <p>Поле обязательно к заполнению!</p>}</label>
 					</div>
 					<div className="form-control">
-						<input {...register('password',
+						<input type="password" {...register('password',
 							{
 								required: true,
 								minLength: { value: 5, message: "Некорректный пароль" }
