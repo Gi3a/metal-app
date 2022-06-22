@@ -24,8 +24,6 @@ function Modal() {
 	}
 
 	const [user, setUser] = useState({
-		phone: "",
-		password: ""
 	})
 
 	const dispatches = () => {
