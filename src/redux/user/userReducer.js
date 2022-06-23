@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 
 const initialState = {
-	userState: {}
+	userState: []
 }
 
 export const userReducer = createSlice({
@@ -10,7 +10,7 @@ export const userReducer = createSlice({
 	initialState,
 	reducers: {
 		setUser: (state, action) => {
-			state.userState.push(action.payload)
+			[...state, action.payload]
 		},
 
 	}
