@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import '../assets/styles/components/Modal.css'
 import { useForm } from 'react-hook-form'
 import { setState, setSignUpState } from '../redux/modal/reducer'
 import axios from "axios";
 import { FaTimes } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
+import { setUser } from '../redux/user/userReducer'
 
 function Modal() {
 	const {
@@ -23,9 +24,7 @@ function Modal() {
 		reset()
 	}
 
-	const [user, setUser] = useState({
-
-	})
+	const user = useSelector(state => state.userState)
 
 	const dispatches = () => {
 		dispatch(setState())
@@ -40,6 +39,8 @@ function Modal() {
 				.then(res => {
 					localStorage.setItem('token', res.data.accessToken);
 					console.log(res)
+					dispatch(setUser(res.data.user))
+					console.log(user)
 					// общий setUser и setAuth состояние, для идентификации запуска сессии на клиенте
 				})
 		}
