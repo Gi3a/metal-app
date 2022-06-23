@@ -24,6 +24,7 @@ function Modal() {
 	}
 
 	const [user, setUser] = useState({
+
 	})
 
 	const dispatches = () => {
@@ -38,6 +39,7 @@ function Modal() {
 			axios.post("https://metal-api.vercel.app/api/login", data)
 				.then(res => {
 					localStorage.setItem('token', res.data.accessToken);
+					console.log(res)
 					// общий setUser и setAuth состояние, для идентификации запуска сессии на клиенте
 				})
 		}
