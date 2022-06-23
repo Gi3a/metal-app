@@ -40,7 +40,6 @@ function Modal() {
 					localStorage.setItem('token', res.data.accessToken);
 					console.log(res)
 					dispatch(setUser(res.data.user))
-					console.log(user)
 					// общий setUser и setAuth состояние, для идентификации запуска сессии на клиенте
 				})
 		}
