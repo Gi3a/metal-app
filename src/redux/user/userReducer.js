@@ -14,10 +14,13 @@ export const userReducer = createSlice({
 			usered.push(action.payload)
 			return { userState: usered }
 		},
+		removeUser: (state) => {
+			state.userState.length = 0
+		}
 
 	}
 })
 
 export default userReducer.reducer;
 
-export const { setUser } = userReducer.actions
+export const { setUser, removeUser } = userReducer.actions

@@ -89,8 +89,6 @@ function Modal() {
 				<div>Нет аккаунта? <a href='#' onClick={dispatches} > Зарегистрируйтесь</a></div>
 			</div>
 		</div>
-
-
 	)
 }
 
