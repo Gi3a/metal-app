@@ -33,7 +33,6 @@ function Modal() {
 
 	const reg = (data) => {
 		const { email, password } = data
-		console.log(data)
 		if (email && password) {
 			axios.post("https://metal-api.vercel.app/api/login", data)
 				.then(res => {
