@@ -2,9 +2,10 @@ import React from 'react'
 import { TbBuildingFactory2, TbCirclePlus, TbClipboardList, TbLogin } from 'react-icons/tb'
 import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { setState } from '../redux/modal/reducer'
 import { removeUser } from '../redux/user/userReducer'
 import '../assets/styles/components/Header.css'
+
+
 function HeaderSecond() {
 
 	const dispatch = useDispatch()
@@ -21,13 +22,13 @@ function HeaderSecond() {
 				</Link>
 			</div>
 			<div className="header_right">
-				<a onClick={() => dispatch(setState())} >
+				<a href='/'>
 					<TbLogin />Личный кабинет
 				</a>
-				<Link onClick={() => dispatch(removeUser())} className="add_order">
+				<a onClick={() => dispatch(removeUser())} className="add_order">
 					<TbCirclePlus />
 					Выйти
-				</Link>
+				</a>
 			</div>
 		</div>
 	)

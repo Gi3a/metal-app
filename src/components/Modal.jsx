@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import '../assets/styles/components/Modal.css'
 import { useForm } from 'react-hook-form'
@@ -22,6 +22,7 @@ function Modal() {
 	const onSubmit = (data) => {
 		reg(data)
 		reset()
+
 	}
 
 	const user = useSelector(state => state.userState)
@@ -31,6 +32,7 @@ function Modal() {
 		dispatch(setSignUpState())
 	}
 
+
 	const reg = (data) => {
 		const { email, password } = data
 		if (email && password) {
@@ -39,6 +41,7 @@ function Modal() {
 					localStorage.setItem('token', res.data.accessToken);
 					console.log(res)
 					dispatch(setUser(res.data.user))
+					dispatch(setState())
 					// общий setUser и setAuth состояние, для идентификации запуска сессии на клиенте
 				})
 		}

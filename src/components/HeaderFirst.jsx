@@ -7,6 +7,7 @@ import '../assets/styles/components/Header.css'
 
 function HeaderFirst() {
 
+
 	const dispatch = useDispatch()
 	return (
 		<div className='container'>

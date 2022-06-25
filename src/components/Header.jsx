@@ -15,9 +15,7 @@ function Header() {
 	return (
 		<>
 			<header>
-				{user.length === 0 ? <HeaderFirst /> : <HeaderSecond />}
-
-
+				{user.length > 0 ? <HeaderSecond /> : <HeaderFirst />}
 			</header>
 			{modalSelector ? <Modal /> : ''}
 			{modalSignUpSelector ? <ModalSignup /> : ''}
