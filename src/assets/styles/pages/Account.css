@@ -1,0 +1,8 @@
+.page div {
+	padding: 50px;
+}
+
+.page {
+	display: flex;
+	flex-wrap: wrap;
+}

@@ -17,7 +17,6 @@ export const userReducer = createSlice({
 		removeUser: (state) => {
 			state.userState.length = 0
 		}
-
 	}
 })
 

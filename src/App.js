@@ -16,6 +16,7 @@ import AddOrder from './pages/AddOrder';
 import Companies from './pages/Companies';
 import OrderCard from './pages/OrderCard';
 import AddCompany from './pages/AddCompany';
+import Account from './pages/Account';
 
 function App() {
 
@@ -25,7 +26,7 @@ function App() {
 
 				<Route path="" element={<Home />} />
 				<Route path="/orders" element={<Orders />} />
-
+				<Route path="/account" element={<Account />} />
 				<Route path="/companies" element={<Companies />} />
 				<Route path="/order/:id" element={<OrderCard />} />
 				<Route path="/add-order" element={<AddOrder />} />
