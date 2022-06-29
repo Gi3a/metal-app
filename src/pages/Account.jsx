@@ -13,7 +13,8 @@ function Account() {
 		<div className='page'>
 			<div>
 				<h2>Мои покупки</h2>
-				<a>Подробнее</a>
+				<a>Список покупок</a>
+
 			</div>
 			<div>
 				<h2>Мой кошелек</h2>
